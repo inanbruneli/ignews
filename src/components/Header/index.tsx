@@ -1,3 +1,4 @@
+import { SignIn } from '../SignIn';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -9,6 +10,8 @@ export function Header() {
           <a className={styles.active}>Home</a>
           <a>Posts</a>
         </nav>
+
+        <SignIn />
       </div>
     </header>
   )
