@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { stripe } from "../../services/stripe";
 import { getSession } from 'next-auth/react';
 import { fauna } from "../../services/fauna";
-import {query as q } from 'faunadb';
+import { query as q } from 'faunadb';
 
 type User = {
   ref: {
@@ -47,7 +47,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       custumerId = stripeCustumer.id;
     }
 
-
     const StripeCheckoutSession = await stripe.checkout.sessions.create({
       customer: custumerId,
       payment_method_types: ['card'],
@@ -57,8 +56,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ],
       mode: 'subscription',
       allow_promotion_codes:true,
-      success_url: 'http://localhost/3000/posts',
-      cancel_url: 'http://localhost/3000/'
+      success_url: 'http://localhost:3000/posts',
+      cancel_url: 'http://localhost:3000/posts'
     })
 
     return res.status(200).json({sessionId: StripeCheckoutSession.id})

@@ -17,11 +17,15 @@ export default NextAuth({
     }),
   ],
   callbacks: {
+    async session(session){      
+      return {
+        ...session.session,
+        activeSession: false,
+      }
+    },
+    
     async signIn(user, account, profile){
       const {email} = user.user;
-
-
-
 
       await fauna.query(
         q.If( //se
