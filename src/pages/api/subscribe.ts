@@ -26,7 +26,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       )
     )
 
-    let custumerId = user.data.stripe_custumer_id;
+    let custumerId = user['data'].stripe_custumer_id;
 
     if (!custumerId){
       const stripeCustumer = await stripe.customers.create({
@@ -35,7 +35,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   
       await fauna.query<User>(
         q.Update(
-          q.Ref(q.Collection('users'), user.ref.id),
+          q.Ref(q.Collection('users'), user['ref'].id),
           {
             data: {
               stripe_custumer_id: stripeCustumer.id
@@ -56,8 +56,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ],
       mode: 'subscription',
       allow_promotion_codes:true,
-      success_url: 'http://localhost:3000/posts',
-      cancel_url: 'http://localhost:3000/posts'
+      success_url: 'https://inanbruneli.github.io/ignews/posts',
+      cancel_url: 'https://inanbruneli.github.io/ignews/posts'
     })
 
     return res.status(200).json({sessionId: StripeCheckoutSession.id})
