@@ -12,7 +12,6 @@ interface Props {
 }
 
 export default function Home({ product }: Props) {
-  console.log(process.env.AUTH_SECRET);
   return (
     <>
       <Head>
@@ -22,7 +21,7 @@ export default function Home({ product }: Props) {
       <main className={styles.contantContainer}>
         <section className={styles.hero}>
           <span>👏 Hey, welcome</span>
-          <h1>News about the <span>Reactt</span> world.</h1>
+          <h1>News about the <span>React</span> world.</h1>
           <p>
             Get acess to all publications <br />
             <span>for {product.amout} month</span>

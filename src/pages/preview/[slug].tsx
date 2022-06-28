@@ -7,7 +7,6 @@ import styles from '../posts/post.module.scss';
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { redirect } from "next/dist/server/api-utils";
 
 interface PostPreviewProps {
   post: {

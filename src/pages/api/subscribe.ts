@@ -56,8 +56,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ],
       mode: 'subscription',
       allow_promotion_codes:true,
-      success_url: 'https://inanbruneli.github.io/ignews/posts',
-      cancel_url: 'https://inanbruneli.github.io/ignews/posts'
+      success_url: 'https://ignews-inanbruneli.vercel.app/posts',
+      cancel_url: 'https://ignews-inanbruneli.vercel.app/posts'
     })
 
     return res.status(200).json({sessionId: StripeCheckoutSession.id})
