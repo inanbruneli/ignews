@@ -31,9 +31,9 @@
 
 - ReactJS
 - NextJS
- - Context
- - Typescript
- - SCSS
+  - Context
+  - Typescript
+  - SCSS
 
 - API
   - NextAuth
@@ -51,4 +51,4 @@ Feel free to put your feedback 🚀🚀
 - Instagram - [@inanbrunelli](https://www.instagram.com/inanbrunelli)
 - Github - [@inanbrunelli](https://github.com/inanbruneli)
 - Website - [inanbrunell.com](https://inanbruneli.github.io/portifolio/)
--Linkedin - [@inanbrunelli](https://www.linkedin.com/in/inan-brunelli/)
+- Linkedin - [@inanbrunelli](https://www.linkedin.com/in/inan-brunelli/)
