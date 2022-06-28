@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function Home({ product }: Props) {
-  console.log('estou atualizado')
+  console.log(process.env.AUTH_SECRET);
   return (
     <>
       <Head>
