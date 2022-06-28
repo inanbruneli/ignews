@@ -52,5 +52,6 @@ export default NextAuth({
       return true; 
 
     }
-  }
+  },
+  secret: 'aqoEL',
 })
