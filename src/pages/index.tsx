@@ -12,6 +12,7 @@ interface Props {
 }
 
 export default function Home({ product }: Props) {
+  console.log('estou atualizado')
   return (
     <>
       <Head>
