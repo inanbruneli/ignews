@@ -2,13 +2,9 @@ import { signIn, useSession, getSession } from 'next-auth/react';
 import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
 import styles from './styles.module.scss';
-import NextAuth from "next-auth";
 
-interface Props {
-  priceId: string
-}
 
-export function SubscribeButton({ priceId }: Props) {
+export function SubscribeButton() {
   const { data: session } = useSession();
 
   async function handleSubscribe() {
