@@ -7,7 +7,7 @@ import { stripe } from '../services/stripe';
 interface Props {
   product: {
     priceId: string;
-    amout: number;
+    amout: string;
   }
 }
 
@@ -27,7 +27,7 @@ export default function Home({ product }: Props) {
             <span>for {product.amout} month</span>
           </p>
 
-          <SubscribeButton priceId={product.priceId} />
+          <SubscribeButton />
         </section>
 
         <img src="/images/avatar.svg" alt="coding" />
