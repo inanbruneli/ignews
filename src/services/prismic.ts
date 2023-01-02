@@ -3,9 +3,9 @@ import * as Prismic from '@prismicio/client';
 export function getPrismicClient(){
   
   const prismic = Prismic.createClient(
-    'inan-ignews',
+    'inan-igniteblog',
     {
-      accessToken: process.env.PRISMIC_ACESS_TOKEN,
+      accessToken: process.env.PRISMIC_ACCESS_TOKEN,
     }
   )
 
